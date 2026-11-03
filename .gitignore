@@ -1,0 +1,36 @@
+# Gradle and build output
+.gradle/
+**/build/
+out/
+
+# Local game data (worlds, accounts, settings, assets)
+/run/
+/runserver/
+/runclient/
+
+# IDE and OS metadata
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+
+# Diagnostics and temporary files
+*.log
+*.tmp
+*.bak
+*.orig
+hs_err_pid*
+replay_pid*
+/DEV_STATE.md
+/validation/
+/celestialpremiumb6/
+/logs/
+
+# Local credentials
+.env
+.env.*
+!.env.example

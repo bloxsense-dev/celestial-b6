@@ -1,0 +1,54 @@
+package net.minecraft.init;
+
+import net.minecraft.world.level.block.Block;
+
+public class Blocks {
+    public static final Block AIR = net.minecraft.world.level.block.Blocks.AIR;
+    public static final Block WATER = net.minecraft.world.level.block.Blocks.WATER;
+    public static final Block LAVA = net.minecraft.world.level.block.Blocks.LAVA;
+    public static final Block FLOWING_WATER = net.minecraft.world.level.block.Blocks.WATER;
+    public static final Block FLOWING_LAVA = net.minecraft.world.level.block.Blocks.LAVA;
+    public static final Block WEB = net.minecraft.world.level.block.Blocks.COBWEB;
+    public static final Block BED = net.minecraft.world.level.block.Blocks.BED.white();
+    public static final Block CHEST = net.minecraft.world.level.block.Blocks.CHEST;
+    public static final Block TRAPPED_CHEST = net.minecraft.world.level.block.Blocks.TRAPPED_CHEST;
+    public static final Block ENDER_CHEST = net.minecraft.world.level.block.Blocks.ENDER_CHEST;
+    public static final Block DRAGON_EGG = net.minecraft.world.level.block.Blocks.DRAGON_EGG;
+    public static final Block DIRT = net.minecraft.world.level.block.Blocks.DIRT;
+    public static final Block STONE = net.minecraft.world.level.block.Blocks.STONE;
+    public static final Block GRAVEL = net.minecraft.world.level.block.Blocks.GRAVEL;
+    public static final Block SAND = net.minecraft.world.level.block.Blocks.SAND;
+    public static final Block GRASS = net.minecraft.world.level.block.Blocks.SHORT_GRASS;
+    public static final Block MONSTER_EGG = net.minecraft.world.level.block.Blocks.INFESTED_STONE;
+    public static final Block ENCHANTING_TABLE = net.minecraft.world.level.block.Blocks.ENCHANTING_TABLE;
+    public static final Block FURNACE = net.minecraft.world.level.block.Blocks.FURNACE;
+    public static final Block CARPET = net.minecraft.world.level.block.Blocks.CARPET.white();
+    public static final Block CRAFTING_TABLE = net.minecraft.world.level.block.Blocks.CRAFTING_TABLE;
+    public static final Block DISPENSER = net.minecraft.world.level.block.Blocks.DISPENSER;
+    public static final Block SNOW_LAYER = net.minecraft.world.level.block.Blocks.SNOW;
+    public static final Block TORCH = net.minecraft.world.level.block.Blocks.TORCH;
+    public static final Block ANVIL = net.minecraft.world.level.block.Blocks.ANVIL;
+    public static final Block JUKEBOX = net.minecraft.world.level.block.Blocks.JUKEBOX;
+    public static final Block STONE_BUTTON = net.minecraft.world.level.block.Blocks.STONE_BUTTON;
+    public static final Block WOODEN_BUTTON = net.minecraft.world.level.block.Blocks.OAK_BUTTON;
+    public static final Block LEVER = net.minecraft.world.level.block.Blocks.LEVER;
+    public static final Block NOTEBLOCK = net.minecraft.world.level.block.Blocks.NOTE_BLOCK;
+    public static final Block STONE_PRESSURE_PLATE = net.minecraft.world.level.block.Blocks.STONE_PRESSURE_PLATE;
+    public static final Block LIGHT_WEIGHTED_PRESSURE_PLATE = net.minecraft.world.level.block.Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE;
+    public static final Block WOODEN_PRESSURE_PLATE = net.minecraft.world.level.block.Blocks.OAK_PRESSURE_PLATE;
+    public static final Block HEAVY_WEIGHTED_PRESSURE_PLATE = net.minecraft.world.level.block.Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE;
+    public static final Block STONE_SLAB = net.minecraft.world.level.block.Blocks.STONE_SLAB;
+    public static final Block WOODEN_SLAB = net.minecraft.world.level.block.Blocks.OAK_SLAB;
+    public static final Block STONE_SLAB2 = net.minecraft.world.level.block.Blocks.SMOOTH_STONE_SLAB;
+    public static final Block RED_MUSHROOM = net.minecraft.world.level.block.Blocks.RED_MUSHROOM;
+    public static final Block BROWN_MUSHROOM = net.minecraft.world.level.block.Blocks.BROWN_MUSHROOM;
+    public static final Block YELLOW_FLOWER = net.minecraft.world.level.block.Blocks.DANDELION;
+    public static final Block RED_FLOWER = net.minecraft.world.level.block.Blocks.POPPY;
+    public static final Block GLASS_PANE = net.minecraft.world.level.block.Blocks.GLASS_PANE;
+    public static final Block STAINED_GLASS_PANE = net.minecraft.world.level.block.Blocks.STAINED_GLASS_PANE.white();
+    public static final Block IRON_BARS = net.minecraft.world.level.block.Blocks.IRON_BARS;
+    public static final Block CACTUS = net.minecraft.world.level.block.Blocks.CACTUS;
+    public static final Block LADDER = net.minecraft.world.level.block.Blocks.LADDER;
+    public static final Block PUMPKIN = net.minecraft.world.level.block.Blocks.PUMPKIN;
+    public static final Block LOG = net.minecraft.world.level.block.Blocks.OAK_LOG;
+}
