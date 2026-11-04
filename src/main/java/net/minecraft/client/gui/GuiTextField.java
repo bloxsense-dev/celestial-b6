@@ -49,7 +49,7 @@ public class GuiTextField {
 
     public boolean textboxKeyTyped(char typedChar, int keyCode) {
         if (!this.isFocused) return false;
-        if (keyCode == 14) { // BACKSPACE
+        if (keyCode == 14) {             
             if (!this.text.isEmpty()) {
                 this.text = this.text.substring(0, this.text.length() - 1);
                 return true;

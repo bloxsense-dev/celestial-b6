@@ -1,6 +1,6 @@
-/*
- * Decompiled with CFR 0.150.
- */
+
+
+
 package org.celestial.client.ui.clickgui.component;
 
 import java.util.ArrayList;
@@ -73,10 +73,6 @@ implements Helper {
         this.x = x;
     }
 
-    /*
-     * Enabled force condition propagation
-     * Lifted jumps to return sites
-     */
     protected boolean isHovered(double mouseX, double mouseY) {
         double x = this.getX();
         double y = this.getY();

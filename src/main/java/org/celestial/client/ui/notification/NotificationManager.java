@@ -51,7 +51,7 @@ public class NotificationManager implements Helper {
                     RectHelper.drawRect(translateX, translateY, translateX - 2, (translateY + 28), ClientHelper.getClientColor().getRGB());
                     RectHelper.drawRect(translateX, translateY, scaledWidth, (translateY + 28), new Color(35, 34, 34).getRGB());
 
-                    //    String time = " (" + MathematicHelper.round((int) (notification.getTime() - notification.getTimer().getTime()) / 1000F, 1) + "s)";
+
                     if (!HUD.font.currentMode.equals("Minecraft")) {
                         mc.latoBig.drawStringWithShadow(TextFormatting.BOLD + notification.getTitle(), translateX + 5, translateY + 4, -1);
                         mc.latoFontRender.drawStringWithShadow(notification.getContent(), translateX + 5, translateY + 17, new Color(245, 245, 245).getRGB());

@@ -4131,7 +4131,7 @@ public abstract class LivingEntity extends Entity implements Attackable, Waypoin
 
     public record Fallsounds(SoundEvent small, SoundEvent big) {
     }
-    // cel-compat
+
 
     public ItemStack getHeldItemMainhand() { return this.getMainHandItem(); }
 
@@ -4155,8 +4155,6 @@ public abstract class LivingEntity extends Entity implements Attackable, Waypoin
 
     public void setSneaking(boolean sneaking) { this.setShiftKeyDown(sneaking); }
 
-
-    // cel-potion
     public void removeActivePotionEffect(net.minecraft.core.Holder<net.minecraft.world.effect.MobEffect> effect) {
         this.removeEffect(effect);
     }

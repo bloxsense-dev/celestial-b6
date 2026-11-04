@@ -561,7 +561,7 @@ public class Inventory extends net.minecraft.entity.player.InventoryPlayer imple
         ItemStack selectedItem = this.getSelectedItem();
         return selectedItem.isEmpty() ? ItemStack.EMPTY : this.removeItem(this.selected, all ? selectedItem.getCount() : 1);
     }
-    // cel-api
+
     public int getFirstEmptyStack() {
         for (int i = 0; i < this.items.size(); i++) {
             if (this.items.get(i).isEmpty()) return i;

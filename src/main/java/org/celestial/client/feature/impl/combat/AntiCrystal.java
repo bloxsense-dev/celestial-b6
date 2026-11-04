@@ -67,19 +67,13 @@ public class AntiCrystal extends Feature {
 
         this.setSuffix("" + (int) this.rangeToBlock.getCurrentValue());
 
-        /* VARIABLES */
-
         int oldSlot = mc.player.inventory.currentItem;
         BlockPos pos = BlockHelper.getSphere(BlockHelper.getPlayerPos(), rangeToBlock.getCurrentValue(), 6, false, true).stream().filter(this::IsValidBlockPos).min(Comparator.comparing(blockPos -> EntityHelper.getDistanceOfEntityToBlock(mc.player, blockPos))).orElse(null);
         if (InventoryHelper.doesHotbarHaveBlock() && pos != null) {
 
-            /* CHECK DELAY */
-
             if (timerHelper.hasReached(this.delay.getCurrentValue())) {
 
                 if (getSlotWithBlock() != -1) {
-
-                    /* CHECK BLOCK ABOVE */
 
                     if (!mc.world.isAirBlock(pos.up(1))) {
                         this.invalidPositions.add(pos);
@@ -93,15 +87,15 @@ public class AntiCrystal extends Feature {
                         }
                     }
 
-                    /* CHECK INVALID POS */
+
                     if (!this.invalidPositions.contains(pos)) {
 
-                        /* RAY-TRACE */
+
                         if (mc.world.rayTraceBlocks(new Vec3d(mc.player.posX, mc.player.posY + mc.player.getEyeHeight(), mc.player.posZ), new Vec3d(pos.getX(), pos.getY(), pos.getZ()), false, true, false) != null && !throughWalls.getCurrentValue()) {
                             return;
                         }
 
-                        /* SEND ROTATION PACKET */
+
                         float[] rots = RotationHelper.getRotationVector(new Vec3d(pos.getX() + 0.5, pos.getY() + 1.4, pos.getZ() + 0.5), true, 2, 2, 360);
                         event.setYaw(rots[0]);
                         event.setPitch(rots[1]);
@@ -109,17 +103,17 @@ public class AntiCrystal extends Feature {
                         mc.player.rotationYawHead = rots[0];
                         mc.player.rotationPitchHead = rots[1];
 
-                        /* SWITCH TO BLOCK */
+
                         mc.player.inventory.currentItem = getSlotWithBlock();
 
-                        /* CLICK ON BLOCK */
+
                         mc.playerController.processRightClickBlock(mc.player, mc.world, pos, EnumFacing.UP, new Vec3d(pos.getX(), pos.getY(), pos.getZ()), EnumHand.MAIN_HAND);
                         mc.player.swingArm(EnumHand.MAIN_HAND);
 
-                        /* SWITCH OLD SLOT */
+
                         mc.player.inventory.currentItem = oldSlot;
 
-                        /* RESET DELAY TIMER */
+
                         timerHelper.reset();
                     }
                 }

@@ -21,33 +21,7 @@ public class AesCommand extends CommandAbstract {
 
     @Override
     public void execute(String... strings) {
-//        if (strings.length > 3) {
-//            if (strings[0].equals("aes")) {
-//                switch (strings[1]) {
-//                    case "encrypt": {
-//                        StringBuilder command = new StringBuilder();
-//                        for (int i = 5; i < strings.length; ++i) {
-//                            command.append(strings[i]).append(" ");
-//                        }
-//                        ChatHelper.addChatMessage(strings.length < 16 ? "Твой ключ должен быть 16, 32, 64 бита" : "");
-//                        String encrypt = encryptAes(command.toString(), strings[4], strings[3].equals("true"));
-//                        ChatHelper.addChatMessage("Your encrypted text: " + encrypt);
-//                        break;
-//                    }
-//                    case "decrypt": {
-//                        StringBuilder command = new StringBuilder();
-//                        for (int i = 4; i < strings.length; ++i) {
-//                            command.append(strings[i]).append(" ");
-//                        }
-//                        String decrypt = decryptAes(command.toString(), strings[3], strings[2].equals("true"));
-//                        ChatHelper.addChatMessage("Your decrypted text: " + decrypt);
-//                        break;
-//                    }
-//                }
-//            }
-//        } else {
-//            ChatHelper.addChatMessage(this.getUsage());
-//        }
+
     }
 
 

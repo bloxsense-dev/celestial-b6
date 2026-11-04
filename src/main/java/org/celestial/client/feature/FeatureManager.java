@@ -19,8 +19,6 @@ public class FeatureManager {
 
     public FeatureManager() {
 
-        /* HUD */
-
         features.add(new ClickGui());
         features.add(new HUD());
         features.add(new FeatureList());
@@ -46,7 +44,7 @@ public class FeatureManager {
         features.add(new PortalFeatures());
         features.add(new CameraNoClip());
 
-        /* MISC */
+
         features.add(new FreeCam());
         features.add(new Disabler());
         features.add(new StreamerMode());
@@ -67,7 +65,7 @@ public class FeatureManager {
         features.add(new ServerCrasher());
         features.add(new Secret());
 
-        /* COMBAT */
+
         features.add(new KillAura());
         features.add(new AntiBot());
         features.add(new TargetStrafe());
@@ -89,7 +87,7 @@ public class FeatureManager {
         features.add(new Reach());
         features.add(new NoFriendDamage());
 
-        /* MOVEMENT */
+
         features.add(new Scaffold());
         features.add(new AutoSprint());
         features.add(new FastClimb());
@@ -112,7 +110,7 @@ public class FeatureManager {
         features.add(new HighJump());
         features.add(new Strafe());
 
-        /* PLAYER */
+
         features.add(new GuiWalk());
         features.add(new AutoRespawn());
         features.add(new AntiPush());
@@ -142,7 +140,7 @@ public class FeatureManager {
         features.add(new BullingBot());
         features.add(new ChatAppend());
 
-        /* VISUALS */
+
         features.add(new EntityESP());
         features.add(new BlockESP());
         features.add(new NameTags());

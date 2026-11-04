@@ -1,6 +1,6 @@
-/*
- * Decompiled with CFR 0.150.
- */
+
+
+
 package org.celestial.client.files.impl;
 
 import java.io.BufferedReader;

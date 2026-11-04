@@ -92,7 +92,7 @@ public class Trajectories extends Feature {
                 projectileMotionY *= .99;
                 projectileMotionZ *= .99;
 
-                projectileMotionY -= (isBow ? .05 : isThrowablePotion(stack) ? .05 : .03); // Gravitation
+                projectileMotionY -= (isBow ? .05 : isThrowablePotion(stack) ? .05 : .03);               
 
                 GL11.glVertex3d(projectilePosX - mc.getRenderManager().renderPosX, projectilePosY - mc.getRenderManager().renderPosY, projectilePosZ - mc.getRenderManager().renderPosZ);
             }

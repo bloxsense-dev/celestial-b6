@@ -50,7 +50,7 @@ public class MathematicHelper implements Helper {
         return (float) (min + (max - min) * Math.random());
     }
 
-    // cel-rand
+
     public static float randomFloat(float min, float max) {
         return min + (float) (Math.random() * (max - min));
     }

@@ -1615,7 +1615,7 @@ public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements 
             org.lwjgl.opengl.GL11.glEnable(org.lwjgl.opengl.GL11.GL_TEXTURE_2D);
             org.lwjgl.opengl.GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
-            // Minecraft has already presented its render target. Draw only the legacy overlay here.
+
             org.lwjgl.opengl.GL11.glEnable(org.lwjgl.opengl.GL11.GL_BLEND);
             org.lwjgl.opengl.GL11.glBlendFunc(org.lwjgl.opengl.GL11.GL_SRC_ALPHA, org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_ALPHA);
 
@@ -1651,7 +1651,7 @@ public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements 
                 org.lwjgl.opengl.GL11.glPopMatrix();
             }
             org.lwjgl.opengl.GL11.glMatrixMode(org.lwjgl.opengl.GL11.GL_MODELVIEW);
-            // Legacy helpers call GL directly; the next Minecraft pass must reapply its state.
+
             com.mojang.blaze3d.opengl.GlStateManager.resetCache();
         }
     }

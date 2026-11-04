@@ -20,7 +20,7 @@ public class Flight extends Feature {
         super("Flight", "Позволяет вам летать без креатив режима", Type.Movement);
         flyMode = new ListSetting("Flight Mode", "Vanilla", () -> true, "Vanilla", "MineLand", "Matrix 6.3.0", "WellMore", "Matrix Boost 6.2.2", "Matrix Glide", "Matrix Web");
         speed = new NumberSetting("Flight Speed", 5F, 0.1F, 15F, 0.1F, () -> flyMode.currentMode.equals("Vanilla") || flyMode.currentMode.equals("WellMore"));
-        //   TPAmount = new NumberSetting("TPAmount", 25, 5, 100, 1, () -> flyMode.currentMode.equals("ReallyWorld"));
+
         addSettings(flyMode, speed);
     }
 

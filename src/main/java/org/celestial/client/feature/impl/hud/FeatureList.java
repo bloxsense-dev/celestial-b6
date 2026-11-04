@@ -52,10 +52,6 @@ public class FeatureList extends Feature {
     public FeatureList() {
         super("FeatureList", "Показывает список всех включенных модулей", Type.Hud);
 
-        /* COLOR SETTINGS */
-
-        /* OTHER */
-
         borderMode = new ListSetting("Border Mode", "Full", () -> border.getCurrentValue(), "Full", "Single");
         sortMode = new ListSetting("FeatureList Sort", "Length", () -> true, "Length", "Alphabetical");
         fontRenderType = new ListSetting("FontRender Type", "Shadow", () -> true, "Default", "Shadow", "Outline");
@@ -63,8 +59,8 @@ public class FeatureList extends Feature {
         border = new BooleanSetting("Border", true, () -> true);
         rightBorder = new BooleanSetting("Right Border", true, () -> true);
         suffix = new BooleanSetting("Suffix", true, () -> true);
-        //    alpha = new NumberSetting("BackgroundAlpha", 1, 1, 255, 1, () -> backGround.getCurrentValue() && !blur.getCurrentValue());
-        //   bright = new NumberSetting("BackgroundBright", 255, 1, 255, 1, () -> backGround.getCurrentValue() && !blur.getCurrentValue());
+
+
         rainbowSaturation = new NumberSetting("Rainbow Saturation", 0.8F, 0.1F, 1F, 0.1F, () -> HUD.colorList.currentMode.equals("Rainbow") || colorSuffixMode.currentMode.equals("Rainbow"));
         rainbowBright = new NumberSetting("Rainbow Brightness", 1F, 0.1F, 1F, 0.1F, () -> HUD.colorList.currentMode.equals("Rainbow") || colorSuffixMode.currentMode.equals("Rainbow"));
         fontX = new NumberSetting("FontX", 0, -4, 20, 0.1F, () -> true);

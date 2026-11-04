@@ -344,7 +344,7 @@ public class Connection extends SimpleChannelInboundHandler<Packet<?>> {
                 }
             }
         }
-        // Legacy movement packets have no codec in the modern protocol.
+
         if (outgoing instanceof net.minecraft.network.play.client.CPacketPlayer movement) {
             outgoing = movement.toModernPacket(false);
         }

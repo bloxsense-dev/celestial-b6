@@ -237,7 +237,7 @@ public final class ItemStack implements DataComponentHolder, ItemInstance {
         return !this.isEmpty() && this.components.hasNonDefault(type);
     }
 
-    // cel-desc
+
     public String getDescriptionId() {
         return this.getItem().getDescriptionId();
     }

@@ -10,19 +10,4 @@ import java.net.URL;
 
 public class HttpUtils {
 
-    /*public static String getDataFromUrl(String url, String text) {
-        try {
-            HttpsURLConnection httpsClient = (HttpsURLConnection) new URL(url + text).openConnection();
-            httpsClient.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
-            BufferedReader buffer = new BufferedReader(new InputStreamReader(httpsClient.getInputStream()));
-            return buffer.readLine();
-        } catch (Exception e) {
-            System.exit(-1);
-            Display.destroy();
-             Minecraft.getMinecraft().shutdown();
-            Runtime.getRuntime().halt(1);
-        }
-        return null;
-    }*/
-
 }

@@ -266,55 +266,52 @@ public class EntityESP extends Feature {
                     if (border.getCurrentValue()) {
                         if (mode.equalsIgnoreCase("2D") && csgoMode.currentMode.equalsIgnoreCase("Box")) {
 
-                            //top
+
                             RectHelper.drawRect(posX - 0.5, posY - 0.5, endPosX + 0.5, posY + 0.5 + 1, black);
 
-                            //button
+
                             RectHelper.drawRect(posX - 0.5, endPosY - 0.5 - 1, endPosX + 0.5, endPosY + 0.5, black);
 
-                            //left
+
                             RectHelper.drawRect(posX - 1.5, posY, posX + 0.5, endPosY + 0.5, black);
 
-                            //right
+
                             RectHelper.drawRect(endPosX - 0.5 - 1, posY, endPosX + 0.5, endPosY + 0.5, black);
 
-                            /* Main ESP */
-
-                            //left
                             RectHelper.drawRect(posX - 1, posY, posX + 0.5 - 0.5, endPosY, color);
 
-                            //Button
+
                             RectHelper.drawRect(posX, endPosY - 1, endPosX, endPosY, color);
 
-                            //Top
+
                             RectHelper.drawRect(posX - 1, posY, endPosX, posY + 1, color);
 
-                            //Right
+
                             RectHelper.drawRect(endPosX - 1, posY, endPosX, endPosY, color);
                         } else if (mode.equalsIgnoreCase("2D") && csgoMode.currentMode.equalsIgnoreCase("Corner")) {
 
-                            //Top Left
+
                             RectHelper.drawRect(posX + 1, posY, posX - 1, posY + (endPosY - posY) / 4 + 0.5, black);
 
-                            //Button Left
+
                             RectHelper.drawRect(posX - 1, endPosY, posX + 1, endPosY - (endPosY - posY) / 4.0 - 0.5, black);
 
-                            //Top Left Corner
+
                             RectHelper.drawRect(posX - 1, posY - 0.5, posX + (endPosX - posX) / 3, posY + 1, black);
 
-                            //Top Corner
+
                             RectHelper.drawRect(endPosX - (endPosX - posX) / 3 - 0, posY - 0.5, endPosX, posY + 1.5, black);
 
-                            //Top Right Corner
+
                             RectHelper.drawRect(endPosX - 1.5, posY, endPosX + 0.5, posY + (endPosY - posY) / 4 + 0.5, black);
 
-                            //Right Button Corner
+
                             RectHelper.drawRect(endPosX - 1.5, endPosY, endPosX + 0.5, endPosY - (endPosY - posY) / 4 - 0.5, black);
 
-                            //Left Button
+
                             RectHelper.drawRect(posX - 1, endPosY - 1.5, posX + (endPosX - posX) / 3 + 0.5, endPosY + 0.5, black);
 
-                            //Right Button
+
                             RectHelper.drawRect(endPosX - (endPosX - posX) / 3 - 0.5, endPosY - 1.5, endPosX + 0.5, endPosY + 0.5, black);
 
                             RectHelper.drawRect(posX + 0.5, posY, posX - 0.5, posY + (endPosY - posY) / 4, color);
@@ -336,8 +333,6 @@ public class EntityESP extends Feature {
                     float maxHealth = LivingEntity.getMaxHealth();
                     double hpPercentage = (targetHP / maxHealth);
                     double hpHeight2 = (endPosY - posY) * hpPercentage;
-
-                    /*CLIP HELPER*/
 
                     if (Celestial.instance.featureManager.getFeatureByClass(ClipHelper.class).getState()) {
                         BlockPos playerPosY = new BlockPos(0, mc.player.posY, 0);

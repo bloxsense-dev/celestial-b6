@@ -1,6 +1,6 @@
-/*
- * Decompiled with CFR 0.150.
- */
+
+
+
 package org.celestial.client.feature.impl.hud;
 
 import java.awt.Color;

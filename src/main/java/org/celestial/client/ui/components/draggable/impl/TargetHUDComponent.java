@@ -341,11 +341,11 @@ public class TargetHUDComponent extends DraggableModule {
                 GL11.glDisable(3089);
             }
 
-            /* HEALTH BAR */
+
             RectHelper.drawRectBetter(x + 1.5F, y + 39, 120, 4, new Color(26, 28, 25, 255).getRGB());
             RectHelper.drawRectBetter(x + 1.5F, y + 39, healthWid, 4, new Color(2, 145, 98, 255).getRGB());
 
-            /* ARMOR BAR */
+
             RectHelper.drawRectBetter(x + 1.5F, y + 47, 120, 4, new Color(26, 28, 25, 255).getRGB());
             RectHelper.drawRectBetter(x + 1.5F, y + 47, armorWid, 4, new Color(65, 138, 195, 255).getRGB());
         }
@@ -377,7 +377,7 @@ public class TargetHUDComponent extends DraggableModule {
             }
         }
 
-        // Losing a target is normal; the other HUD components must keep rendering.
+
         if (target == null) return;
 
         if (mode.equalsIgnoreCase("Astolfo")) {
@@ -412,8 +412,6 @@ public class TargetHUDComponent extends DraggableModule {
             healthWid = MathHelper.clamp(healthWid, 0, 100);
             healthBarWidth = AnimationHelper.calculateCompensation((float) healthWid, healthBarWidth, (long) 0.005, 0.005);
             RectHelper.drawRectBetter(x, y, 140, 34, new Color(20, 20, 20).getRGB());
-
-            //  org.celestial.client.helpers.render.RenderHelper.drawCircle(x + 120, y + 13, 0, mc.player.getHealth() / mc.player.getMaxHealth() * 360, 8, new Color(color));
 
             if (!target.getName().getString().isEmpty()) {
                 mc.fontRenderer.drawStringWithShadow(Celestial.instance.featureManager.getFeatureByClass(StreamerMode.class).getState() && StreamerMode.otherNames.getCurrentValue() ? "Protected" : target.getName().getString(), x + 38, y + 5, -1);
@@ -495,8 +493,8 @@ public class TargetHUDComponent extends DraggableModule {
             if (target.getHealth() < 0)
                 return;
             float x = getX(), y = getY();
-         //   GL11.glScalef(this.displayPercent, this.displayPercent, this.displayPercent);
-          //  GL11.glTranslatef(getX() * 0.5f * (1.0f - this.displayPercent) / this.displayPercent, getY() * 0.5f * (1.0f - this.displayPercent) / this.displayPercent, 0.0f);
+
+
             float healthWid = (target.getHealth() / target.getMaxHealth() * (40 + mc.fontRendererObj.getStringWidth(Celestial.instance.featureManager.getFeatureByClass(StreamerMode.class).getState() && StreamerMode.otherNames.getCurrentValue() ? "Protected" : target.getName().getString())));
             healthWid = (float) MathHelper.clamp(healthWid, 0.0D, 124.0D);
             healthBarWidth = AnimationHelper.calculateCompensation(healthWid, healthBarWidth, 0, 0);
@@ -619,11 +617,11 @@ public class TargetHUDComponent extends DraggableModule {
                 GL11.glPopMatrix();
             }
 
-            /* HEALTH BAR */
+
             RectHelper.drawRectBetter(x + 1.5F, y + 39, 120, 4, new Color(26, 28, 25, 255).getRGB());
             RectHelper.drawRectBetter(x + 1.5F, y + 39, healthWid, 4, new Color(2, 145, 98, 255).getRGB());
 
-            /* ARMOR BAR */
+
             RectHelper.drawRectBetter(x + 1.5F, y + 47, 120, 4, new Color(26, 28, 25, 255).getRGB());
             RectHelper.drawRectBetter(x + 1.5F, y + 47, armorWid, 4, new Color(65, 138, 195, 255).getRGB());
         }

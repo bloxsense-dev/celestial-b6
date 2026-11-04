@@ -27,7 +27,7 @@ public class Frustum {
         this.calculateFrustum(modelView, projection);
     }
 
-    // cel-compat ctor
+
     public Frustum(final Matrix4fc modelView, final Matrix4f projection, final boolean forShadow) {
         this(modelView, projection);
     }
@@ -135,7 +135,7 @@ public class Frustum {
         return frustumPoints;
     }
 
-    // cel-compat disabled
+
     public boolean disabled;
 
     public double getCameraX() { return this.camX; }
@@ -157,7 +157,7 @@ public class Frustum {
         this.planes[5].set(r3).sub(r2);
     }
 
-    // cel-frustum
+
     public void setPosition(double x, double y, double z) {
         this.prepare(x, y, z);
     }

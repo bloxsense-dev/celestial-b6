@@ -1,6 +1,6 @@
-/*
- * Decompiled with CFR 0.150.
- */
+
+
+
 package org.celestial.client.ui.clickgui.component.impl;
 
 import org.celestial.client.ui.clickgui.component.Component;

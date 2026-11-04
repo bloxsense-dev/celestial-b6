@@ -1,4 +1,4 @@
-/* 3eLeHyy#0089 */
+
 
 package org.celestial.client.feature.impl.movement;
 
@@ -241,7 +241,7 @@ public class Speed extends Feature {
                     }
                 }
             } else if (mode.equalsIgnoreCase("MatrixOnGround")) {
-                //3eLeHyy / MyLifeIsShit
+
                 if (mc.player.onGround) {
                     mc.timer.timerSpeed = 1.05F;
                     mc.player.setPosition(mc.player.posX, mc.player.posY + 1.00000000000E-14F, mc.player.posZ);

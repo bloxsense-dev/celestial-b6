@@ -46,8 +46,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class KillAura extends Feature {
 
-    /* UTILS */
-
     public static TimerHelper oldTimerPvp = new TimerHelper();
     public static TimerHelper timer = new TimerHelper();
     public static BooleanSetting players;
@@ -105,8 +103,6 @@ public class KillAura extends Feature {
     public static ListSetting clickMode;
     public static NumberSetting rotPredict = new NumberSetting("Rotation Predict", 0.05F, 0.0F, 10, 0.001F, () -> true);
     public static BooleanSetting raycast = new BooleanSetting("Ray-Cast", true, () -> true);
-
-    /* SETTINGS */
 
     private final TimerHelper blockTimer = new TimerHelper();
     private final TimerHelper shieldBreakerTimer = new TimerHelper();

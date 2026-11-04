@@ -1,6 +1,6 @@
-/*
- * Decompiled with CFR 0.150.
- */
+
+
+
 package org.celestial.client.feature.impl.misc;
 
 import org.celestial.client.feature.Feature;

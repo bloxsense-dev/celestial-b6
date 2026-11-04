@@ -65,6 +65,6 @@ public class DraggableComponent {
     }
 
     public void draw(int mouseX, int mouseY) {
-        // Input is handled once by DraggableManager, including native chat screens.
+
     }
 }

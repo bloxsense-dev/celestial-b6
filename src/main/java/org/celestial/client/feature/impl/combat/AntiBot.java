@@ -62,9 +62,9 @@ public class AntiBot extends Feature {
                     if (entity.ticksExisted >= 5 || !entity.onGround || !(mc.player.getDistanceToEntity(entity) <= 25) || entity.getName().contains(mc.player.getName())) {
                         continue;
                     }
-                    //    if(entity.ticksExisted < 3 && !entity.onGround && ((EntityOtherPlayerMP) entity).getHealth() > ((EntityOtherPlayerMP) entity).getMaxHealth() || (entity.ticksExisted < 3 && entity.isInvisible())){
+
                     isBotPlayer.add(entity);
-                    //}
+
             }
         }
     }

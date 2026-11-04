@@ -17,14 +17,14 @@ import java.util.Random;
 
 public class ServerCrasher extends Feature {
 
-    //public static NumberSetting delay;
+
     public ListSetting mode = new ListSetting("ServerCrasher Mode", "Infinity", () -> true, "Infinity", "TabComplete", "WorldEdit", "Session", "OP", "WorldEdit2", "xACK", "IllegalSwitcher");
 
     public NumberSetting delay = new NumberSetting("Delay", 1000, 1, 5000, 1, () -> mode.currentMode.equals("TabComplete"));
 
     public ServerCrasher() {
         super("ServerCrasher", "Test", Type.Misc);
-        //delay = new NumberSetting("Delay", 1000, 1, 5000, 0.1F, () -> mode.currentMode.equals("TabComplete" + "invalidSession"), NumberSetting.NumberType.MS);
+
         addSettings(delay);
         addSettings(mode);
     }

@@ -300,29 +300,6 @@ public class Scaffold extends Feature {
         float width = render.getResolution().getScaledWidth();
         float height = render.getResolution().getScaledHeight();
         String blockString = this.getBlockCount() + " Blocks";
-//        GL11.glEnable(GL11.GL_BLEND);
-//        GL11.glDisable(GL11.GL_TEXTURE_2D);
-//        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-//        GL11.glEnable(GL11.GL_LINE_SMOOTH);
-//        GL11.glColor4f(0.25F, 0.25F, 0.25F, 1);
-//        GL11.glBegin(GL11.GL_TRIANGLE_FAN);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2 - 6, sr.getScaledHeight() - 65);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2, sr.getScaledHeight() - 57);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2 + 6, sr.getScaledHeight() - 65);
-//
-//        GL11.glEnd();
-//
-//        GL11.glBegin(GL11.GL_LINE_LOOP);
-//        GL11.glColor4f(1, 1, 1, 1);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2 - 6, sr.getScaledHeight() - 65);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2, sr.getScaledHeight() - 57);
-//        GL11.glVertex2d(sr.getScaledWidth() / 2 + 6, sr.getScaledHeight() - 65);
-//
-//        GL11.glEnd();
-//
-//        GL11.glEnable(GL11.GL_TEXTURE_2D);
-//        GL11.glDisable(GL11.GL_BLEND);
-//        GL11.glDisable(GL11.GL_LINE_SMOOTH);
 
         GlStateManager.pushMatrix();
         GlStateManager.translate(23, 15, 0);

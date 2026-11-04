@@ -40,7 +40,7 @@ public class AuthenticationGui extends GuiScreen {
 
         uid.drawTextBox();
 
-        //  mc.robotoRegularFontRender.drawStringWithShadow("Your key:", width / 2F - 25, height / 2F - 82, -1);
+
         if (!uid.isFocused) {
             mc.robotoRegularFontRender.drawStringWithShadow("Your key...", width / 2F - 96, height / 2F - 53, Color.GRAY.getRGB());
         }

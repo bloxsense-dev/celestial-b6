@@ -184,8 +184,8 @@ public class NameTags extends Feature {
 
     public void renderItem(Player e, ItemStack stack, int x, int y) {
         if (stack != null && !stack.isEmpty()) {
-            // GUI items use the native renderer; the legacy RenderItem is a stub.
-            // Project the billboard's local item rectangle into GUI coordinates.
+
+
             float[] model = new float[16], projection = new float[16];
             GL11.glGetFloatv(GL11.GL_MODELVIEW_MATRIX, model);
             GL11.glGetFloatv(GL11.GL_PROJECTION_MATRIX, projection);

@@ -253,7 +253,7 @@ public class GuiScreen extends Screen {
         super.removed();
         this.onGuiClosed();
     }
-    // cel-compat
+
     public int imageWidth;
     public int imageHeight;
 

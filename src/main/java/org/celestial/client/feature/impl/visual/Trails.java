@@ -45,7 +45,7 @@ public class Trails extends Feature {
 
         if (!getState())
             return;
-        
+
         double x = mc.getRenderManager().renderPosX;
         double y = mc.getRenderManager().renderPosY;
         double z = mc.getRenderManager().renderPosZ;
@@ -65,7 +65,7 @@ public class Trails extends Feature {
         float size = Math.max(1, sizeToRemove.getCurrentValue()) * 10;
         points.removeIf(point -> System.currentTimeMillis() - point.getTime() > size);
         long fade = System.currentTimeMillis() - (long) size;
-        // Adjacent vertical pairs form a ribbon, not a diagonal zigzag line.
+
         GL11.glBegin(GL11.GL_QUAD_STRIP);
         for (Point point : points) {
             float alpha;
@@ -128,7 +128,7 @@ public class Trails extends Feature {
             if (!points.isEmpty()) {
                 Point last = points.get(points.size() - 1);
                 double distance = Math.pow(px-last.x, 2) + Math.pow(py-last.y, 2) + Math.pow(pz-last.z, 2);
-                if (distance > 64) points.clear(); // Do not draw across teleports.
+                if (distance > 64) points.clear();                                 
                 else if (distance < 0.0001) return;
             }
             points.add(new Point(px, py, pz, System.currentTimeMillis()));

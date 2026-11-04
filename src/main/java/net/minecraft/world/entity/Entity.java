@@ -4288,7 +4288,7 @@ public abstract class Entity
             return this.save;
         }
     }
-    // cel-compat
+
 
     public Level world;
     public int ticksExisted;
@@ -4331,7 +4331,7 @@ public abstract class Entity
 
     public void onCriticalHit(Entity target) { this.criticalHit(target); }
 
-    // cel-api
+
     public net.minecraft.util.math.AxisAlignedBB boundingBox = new net.minecraft.util.math.AxisAlignedBB(0, 0, 0, 0, 0, 0);
 
     public Level getEntityWorld() { return this.level(); }
@@ -4361,8 +4361,6 @@ public abstract class Entity
 
     public void criticalHit(Entity target) { }
 
-
-    // cel-sneak
     public boolean isSneaking() { return this.isCrouching(); }
 
 }

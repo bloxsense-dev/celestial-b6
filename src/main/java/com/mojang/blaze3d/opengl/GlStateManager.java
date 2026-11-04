@@ -849,7 +849,7 @@ public class GlStateManager {
         glProgram = -1;
         readFbo = -1;
         writeFbo = -1;
-        // Raw compatibility-profile rendering bypasses these cached values as well.
+
         DEPTH.mode.valid = false;
         DEPTH.func = -1;
         DEPTH.mask = GL33C.glGetBoolean(GL33C.GL_DEPTH_WRITEMASK);
@@ -1255,7 +1255,7 @@ public class GlStateManager {
         public int binding;
         public boolean texture2DState;
     }
-    // cel-compat
+
     public static enum SourceFactor {
         ZERO, ONE, SRC_COLOR, ONE_MINUS_SRC_COLOR, SRC_ALPHA, ONE_MINUS_SRC_ALPHA,
         DST_ALPHA, ONE_MINUS_DST_ALPHA, DST_COLOR, ONE_MINUS_DST_COLOR, SRC_ALPHA_SATURATE

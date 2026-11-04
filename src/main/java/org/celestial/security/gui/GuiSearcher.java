@@ -23,49 +23,30 @@ import java.awt.*;
 public class GuiSearcher extends Gui {
     private final int id;
     private final FontRenderer fontRendererInstance;
-    /**
-     * The width of this text field.
-     */
+
     private final int width;
     private final int height;
     public int xPosition;
     public int yPosition;
     public int maxStringLength = 32;
-    /**
-     * If this value is true along with isEnabled, keyTyped will process the keys.
-     */
+
     public boolean isFocused;
-    /**
-     * Has the current text being edited on the textbox.
-     */
+
     private String text = "";
     private int cursorCounter;
     private boolean enableBackgroundDrawing = true;
-    /**
-     * if true the textbox can lose focus by clicking elsewhere on the screen
-     */
+
     private boolean canLoseFocus = true;
-    /**
-     * If this value is true along with isFocused, keyTyped will process the keys.
-     */
+
     private boolean isEnabled = true;
 
-    /**
-     * The current character index that should be used as start of the rendered text.
-     */
     private int lineScrollOffset;
     private int cursorPosition;
 
-    /**
-     * other selection position, maybe the same as the cursor
-     */
     private int selectionEnd;
     private int enabledColor = 14737632;
     private int disabledColor = 7368816;
 
-    /**
-     * True if this textbox is visible
-     */
     private boolean visible = true;
     private GuiPageButtonList.GuiResponder guiResponder;
     private Predicate<String> validator = Predicates.alwaysTrue();
@@ -79,30 +60,18 @@ public class GuiSearcher extends Gui {
         this.height = par6Height;
     }
 
-    /**
-     * Sets the GuiResponder associated with this text box.
-     */
     public void setGuiResponder(GuiPageButtonList.GuiResponder guiResponderIn) {
         this.guiResponder = guiResponderIn;
     }
 
-    /**
-     * Increments the cursor counter
-     */
     public void updateCursorCounter() {
         ++this.cursorCounter;
     }
 
-    /**
-     * Returns the contents of the textbox
-     */
     public String getText() {
         return this.text;
     }
 
-    /**
-     * Sets the text of the textbox, and moves the cursor to the end.
-     */
     public void setText(String textIn) {
         if (this.validator.apply(textIn)) {
             if (textIn.length() > this.maxStringLength) {
@@ -115,9 +84,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * returns the text between the cursor and selectionEnd
-     */
     public String getSelectedText() {
         int i = this.cursorPosition < this.selectionEnd ? this.cursorPosition : this.selectionEnd;
         int j = this.cursorPosition < this.selectionEnd ? this.selectionEnd : this.cursorPosition;
@@ -128,9 +94,6 @@ public class GuiSearcher extends Gui {
         this.validator = theValidator;
     }
 
-    /**
-     * Adds the given text after the cursor, or replaces the currently selected text if there is a selection.
-     */
     public void writeText(String textToWrite) {
         String s = "";
         String s1 = ChatAllowedCharacters.filterAllowedCharacters(textToWrite);
@@ -169,10 +132,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Deletes the given number of words from the current cursor's position, unless there is currently a selection, in
-     * which case the selection is deleted instead.
-     */
     public void deleteWords(int num) {
         if (!this.text.isEmpty()) {
             if (this.selectionEnd != this.cursorPosition) {
@@ -183,10 +142,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Deletes the given number of characters from the current cursor's position, unless there is currently a selection,
-     * in which case the selection is deleted instead.
-     */
     public void deleteFromCursor(int num) {
         if (!this.text.isEmpty()) {
             if (this.selectionEnd != this.cursorPosition) {
@@ -222,23 +177,14 @@ public class GuiSearcher extends Gui {
         return this.id;
     }
 
-    /**
-     * Gets the starting index of the word at the specified number of words away from the cursor position.
-     */
     public int getNthWordFromCursor(int numWords) {
         return this.getNthWordFromPos(numWords, this.getCursorPosition());
     }
 
-    /**
-     * Gets the starting index of the word at a distance of the specified number of words away from the given position.
-     */
     public int getNthWordFromPos(int n, int pos) {
         return this.getNthWordFromPosWS(n, pos, true);
     }
 
-    /**
-     * Like getNthWordFromPos (which wraps this), but adds option for skipping consecutive spaces
-     */
     public int getNthWordFromPosWS(int n, int pos, boolean skipWs) {
         int i = pos;
         boolean flag = n < 0;
@@ -270,30 +216,18 @@ public class GuiSearcher extends Gui {
         return i;
     }
 
-    /**
-     * Moves the text cursor by a specified number of characters and clears the selection
-     */
     public void moveCursorBy(int num) {
         this.setCursorPosition(this.selectionEnd + num);
     }
 
-    /**
-     * Moves the cursor to the very start of this text box.
-     */
     public void setCursorPositionZero() {
         this.setCursorPosition(0);
     }
 
-    /**
-     * Moves the cursor to the very end of this text box.
-     */
     public void setCursorPositionEnd() {
         this.setCursorPosition(this.text.length());
     }
 
-    /**
-     * Call this method from your GuiScreen to process the keys into the textbox
-     */
     public boolean textboxKeyTyped(char typedChar, int keyCode) {
         if (!this.isFocused) {
             return false;
@@ -404,9 +338,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Called when mouse is clicked, regardless as to whether it is over this button or not.
-     */
     public boolean mouseClicked(int mouseX, int mouseY, int mouseButton) {
         boolean flag = mouseX >= this.xPosition && mouseX < this.xPosition + this.width && mouseY >= this.yPosition && mouseY < this.yPosition + this.height;
 
@@ -429,9 +360,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Draws the textbox
-     */
     public void drawTextBox() {
         if (this.getVisible()) {
             if (this.getEnableBackgroundDrawing()) {
@@ -499,9 +427,6 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Draws the current selection and a vertical line cursor in the text box.
-     */
     private void drawCursorVertical(int startX, int startY, int endX, int endY) {
         if (startX < endX) {
             int i = startX;
@@ -539,17 +464,10 @@ public class GuiSearcher extends Gui {
         GlStateManager.enableTexture2D();
     }
 
-    /**
-     * returns the maximum number of character that can be contained in this textbox
-     */
     public int getMaxStringLength() {
         return this.maxStringLength;
     }
 
-    /**
-     * Sets the maximum length for the text in this text box. If the current text is longer than this length, the
-     * current text will be trimmed.
-     */
     public void setMaxStringLength(int length) {
         this.maxStringLength = length;
 
@@ -558,16 +476,10 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * returns the current position of the cursor
-     */
     public int getCursorPosition() {
         return this.cursorPosition;
     }
 
-    /**
-     * Sets the current position of the cursor.
-     */
     public void setCursorPosition(int pos) {
         this.cursorPosition = pos;
         int i = this.text.length();
@@ -575,44 +487,26 @@ public class GuiSearcher extends Gui {
         this.setSelectionPos(this.cursorPosition);
     }
 
-    /**
-     * Gets whether the background and outline of this text box should be drawn (true if so).
-     */
     public boolean getEnableBackgroundDrawing() {
         return this.enableBackgroundDrawing;
     }
 
-    /**
-     * Sets whether or not the background and outline of this text box should be drawn.
-     */
     public void setEnableBackgroundDrawing(boolean enableBackgroundDrawingIn) {
         this.enableBackgroundDrawing = enableBackgroundDrawingIn;
     }
 
-    /**
-     * Sets the color to use when drawing this text box's text. A different color is used if this text box is disabled.
-     */
     public void setTextColor(int color) {
         this.enabledColor = color;
     }
 
-    /**
-     * Sets the color to use for text in this text box when this text box is disabled.
-     */
     public void setDisabledTextColour(int color) {
         this.disabledColor = color;
     }
 
-    /**
-     * Getter for the focused field
-     */
     public boolean isFocused() {
         return this.isFocused;
     }
 
-    /**
-     * Sets focus to this gui element
-     */
     public void setFocused(boolean isFocusedIn) {
         if (isFocusedIn && !this.isFocused) {
             this.cursorCounter = 0;
@@ -625,31 +519,18 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Sets whether this text box is enabled. Disabled text boxes cannot be typed in.
-     */
     public void setEnabled(boolean enabled) {
         this.isEnabled = enabled;
     }
 
-    /**
-     * the side of the selection that is not the cursor, may be the same as the cursor
-     */
     public int getSelectionEnd() {
         return this.selectionEnd;
     }
 
-    /**
-     * returns the width of the textbox depending on if background drawing is enabled
-     */
     public int getWidth() {
         return this.getEnableBackgroundDrawing() ? this.width - 8 : this.width;
     }
 
-    /**
-     * Sets the position of the selection anchor (the selection anchor and the cursor position mark the edges of the
-     * selection). If the anchor is set beyond the bounds of the current text, it will be put back inside.
-     */
     public void setSelectionPos(int position) {
         int i = this.text.length();
 
@@ -686,23 +567,14 @@ public class GuiSearcher extends Gui {
         }
     }
 
-    /**
-     * Sets whether this text box loses focus when something other than it is clicked.
-     */
     public void setCanLoseFocus(boolean canLoseFocusIn) {
         this.canLoseFocus = canLoseFocusIn;
     }
 
-    /**
-     * returns true if this textbox is visible
-     */
     public boolean getVisible() {
         return this.visible;
     }
 
-    /**
-     * Sets whether or not this textbox is visible
-     */
     public void setVisible(boolean isVisible) {
         this.visible = isVisible;
     }

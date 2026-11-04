@@ -319,7 +319,7 @@ public class LocalPlayer extends AbstractClientPlayer {
                 org.celestial.client.event.events.impl.player.EventPreMotion pre =
                     new org.celestial.client.event.events.impl.player.EventPreMotion(sendYaw, sendPitch, sendX, sendY, sendZ, sendOnGround);
                 org.celestial.client.event.EventManager.call(pre);
-                // Legacy handlers write these fields directly, after the regular update event.
+
                 this.setDeltaMovement(this.motionX, this.motionY, this.motionZ);
                 this.getAbilities().sync();
                 if (pre.isCancelled()) {

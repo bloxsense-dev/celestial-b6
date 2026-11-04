@@ -151,7 +151,7 @@ public class MCFontRenderer extends CFont {
                     int c = this.colorCode[colorIndex];
                     GlStateManager.color((c >> 16 & 0xFF) / 255.0f, (c >> 8 & 0xFF) / 255.0f, (c & 0xFF) / 255.0f, alpha);
                 } else if (colorIndex == 16) {
-                    // obfuscated
+
                 } else if (colorIndex == 17) {
                     bold = true;
                     if (italic && this.texItalicBold != null) {
